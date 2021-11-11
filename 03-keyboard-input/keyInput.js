@@ -9,6 +9,8 @@ const keypress = require('keypress');
 // Set up the keypress library
 keypress(process.stdin);
 
+console.log('Press CTRL + d to exit.');
+
 // listen for the "keypress" event
 process.stdin.on('keypress', function (ch, key)
 {
