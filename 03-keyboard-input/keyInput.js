@@ -14,7 +14,12 @@ console.log('Press CTRL + d to exit.');
 // listen for the "keypress" event
 process.stdin.on('keypress', function (ch, key)
 {
-    // Code goes here
+    if (key.ctrl && key.name === 'd')
+    {
+        process.exit(0);
+    }
+
+    console.log(`Pressed: '${key.name}`);
 });
 
 //----------------------------------------------------------------------------------------------------------------------
